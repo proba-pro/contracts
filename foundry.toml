@@ -1,0 +1,32 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+remappings = [
+    "ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+    "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+    "forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "@chainlink/=lib/chainlink/",
+]
+
+[rpc_endpoints]
+goerli = "${ETH_NODE_GOERLI_URL}"
+arbGoerli = "${ETH_NODE_ARB_GOERLI_URL}"
+
+[etherscan]
+#goerli = { key = "${ETH_ETHERSCAN_API_KEY}" }
+#arbGoerli = { key = "${ETH_ETHERSCAN_API_KEY}", chain=421613, url="https://api-goerli.arbiscan.io/api" }
+
+[fmt]
+line_length = 120
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "attributes_first"
+quote_style = "double"
+number_underscore = "thousands"
+override_spacing = true
+wrap_comments = true
+ignore = []
